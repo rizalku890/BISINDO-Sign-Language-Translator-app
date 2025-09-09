@@ -1,0 +1,85 @@
+
+<!--  
+Copyright by
+| Alvin Sengkey
+| 001202000115
+| President University
+| Faculty of Computing
+| Major of Informatics
+| MAY 2023
+-->
+
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>BISINDO Sign Lang. Translator</title>
+  <script type="text/javascript" src="{{ url_for('static', filename='txt_to_speech.js') }}"></script>
+  <script src="https://kit.fontawesome.com/7c11a8c9a5.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-name-div">
+    <div id="app-name">
+        <p style="margin: 0; width: 98%;">
+            <a style="text-decoration: none; color: rgb(244, 242, 246);" href="{{ url_for('index')}}">
+                BISINDO Sign Language Translator
+            </a>
+        </p>
+        <div id="sign-list">
+            <a href="{{ url_for('sign_list_page')}}">
+                <i class="fa-solid fa-grip fa-fade fa-lg" style="color: rgb(244, 242, 246);"></i>
+            </a>
+        </div>
+    </div>
+  </div>
+  <div class="decor-line"></div>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8  offset-lg-2">
+              <div class="type">
+                <div id="text">
+                    <div>Text</div>
+                </div>
+                <div id="s-sl">
+                    <div id="sign">
+                        <div>Sign</div>
+                    </div>
+                    <!-- <div id="sign-list">
+                        <a href="{{ url_for('sign_list_page')}}"><i class="fa-solid fa-list fa-beat-fade"></i></a>..............
+                    </div> -->
+                </div>
+              </div>
+              <div class="main-content">
+                  <div id="input" class="typing-box" contentEditable="true">
+                        <p id="empty"></p>
+                  </div>
+
+                  <a href="{{ url_for('index')}}" class="switch">
+                    <i class="fa-solid fa-right-left fa-xl"></i>
+                  </a>
+
+                  <div id="answer-box2" class="answer-box">
+                    <div class="answer-box-content">
+                        <div id="img-place">
+
+                        </div>
+                        <div class="x-reset-img" onclick="resetImg()">
+                            <i class="fa-solid fa-xmark fa-xl x-reset-complete-trans"></i>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              
+              <div class="prediction-menu" style="margin-top: 50px;">
+                      <div id="ok" onclick="toImages()">
+                          OK
+                      </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

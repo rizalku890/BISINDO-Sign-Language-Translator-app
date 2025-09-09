@@ -1,0 +1,119 @@
+
+<!--  
+Copyright by
+| Alvin Sengkey
+| 001202000115
+| President University
+| Faculty of Computing
+| Major of Informatics
+| MAY 2023
+-->
+
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>BISINDO Sign Lang. Translator</title>
+  <script type="text/javascript" src="{{ url_for('static', filename='txt_to_speech.js') }}"></script>
+  <script src="https://kit.fontawesome.com/7c11a8c9a5.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-name-div">
+    <div id="app-name">
+        <p style="margin: 0; width: 98%;">
+            <a style="text-decoration: none; color: rgb(244, 242, 246);" href="{{ url_for('index')}}">
+                BISINDO Sign Language Translator
+            </a>
+        </p>
+        <div id="sign-list">
+            <a href="{{ url_for('sign_list_page')}}">
+                <i class="fa-solid fa-grip fa-fade fa-lg" style="color: rgb(244, 242, 246);"></i>
+            </a>
+        </div>
+    </div>
+  </div>
+  <div class="decor-line"></div>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8  offset-lg-2">
+              <div class="type">
+                <div id="sign1">
+                    <div>Sign</div>
+                </div>
+                <div id="text1">
+                    <div>Text</div>
+                </div>
+              </div>
+              <div class="main-content">
+                  <div class="img-container">
+                      <a href="{{ url_for('show_result')}}" style="text-decoration: none;">
+                          <img src="{{ url_for('video_feed') }}" width="100%" style="border-radius: 8px;">
+                          <div class="clickimg-info">
+                              <p><i class="fa-solid fa-camera fa-xl fa-bounce"></i></p>
+                          </div>
+                      </a>
+                  </div>
+
+                  <a href="{{ url_for('indexSwitch')}}" class="switch">
+                    <i class="fa-solid fa-right-left fa-xl"></i>
+                  </a>
+                  
+                  <div class="right-boxes"> 
+                  <div class="answer-box">
+                    <div class="answer-box-content">
+                        <p id="complete-trans">{{ show_complete_trans }}</p>
+                        <a href="{{ url_for('x_reset')}}" style="text-decoration: none;" class="x-reset-complete-trans">
+                            <i class="fa-solid fa-xmark fa-xl"></i>
+                        </a>
+                    </div>
+                    <div id="txt-to-speech">
+                        <i id="tts-logo" onclick="start()" class="fa-solid fa-volume-high fa-l"></i>
+                    </div>
+                  </div>
+
+                  <div class="welcome-box">
+                    <div class="answer-box-content">
+                        <div id="img-welcome">
+                            <img src="static/img/w.jpg" width="100">
+                            <img src="static/img/e.jpg" width="100">
+                            <img src="static/img/l.jpg" width="100">
+                            <img src="static/img/c.jpg" width="100">
+                            <img src="static/img/o.jpg" width="100">
+                            <img src="static/img/m.jpg" width="100">
+                            <img src="static/img/e.jpg" width="100">
+                        </div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+              
+              <div class="prediction-menu">
+                  <div class="prediction">
+                      <div class="reset-button">
+                          <a href="{{ url_for('reset')}}" style="text-decoration: none;">
+                              <i class="fa-solid fa-rotate-right fa-lg res-del-button"></i>
+                          </a>
+                      </div>
+                      <div class="prediction-textbox">
+                          <h3 style="visibility: {{ visibility }};">{{ show_translation }}</h3>
+                      </div>
+                      <div class="delete-button">
+                          <a href="{{ url_for('delete')}}" style="text-decoration: none;">
+                              <i class="fa-solid fa-delete-left fa-lg res-del-button"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <a href="{{ url_for('save_result')}}" style="text-decoration: none;">
+                      <div id="ok">
+                          OK
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

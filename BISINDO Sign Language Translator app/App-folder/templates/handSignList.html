@@ -1,0 +1,75 @@
+
+<!-- 
+Copyright by
+| Alvin Sengkey
+| 001202000115
+| President University
+| Faculty of Computing
+| Major of Informatics
+| MAY 2023
+-->
+
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>BISINDO Sign Lang. Translator</title>
+  <script type="text/javascript" src="{{ url_for('static', filename='txt_to_speech.js') }}"></script>
+  <script src="https://kit.fontawesome.com/7c11a8c9a5.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<!-- ............................................................................................................................ -->
+<body>
+  <div class="app-name-div"><h4 id="app-name">
+    <a style="text-decoration: none; color: rgb(244, 242, 246);" href="{{ url_for('index')}}">
+      BISINDO Sign Language Translator
+    </a></h4>
+  </div>
+  <div class="arr-decor-line">
+    <a href="{{ url_for('index')}}">
+      <i class="arr-back fa-solid fa-arrow-left fa-xl"></i>
+    </a>
+  </div>
+  <div class="container" style="padding-left: 80px; padding-right: 80px;">
+      <div class="row">
+          <div class="col-lg-8  offset-lg-2">
+              <div class="type">
+                <div id="sign1">
+                    <div style="font-size: 24px;">A - Z</div>
+                </div>
+              </div>
+                <div id="letter-parent" class="parent">
+                    <div class="letter-box div1"> <p>A</p> <img src="static/img/a.jpg" width="100"> </div>
+                    <div class="letter-box div2"> <p>B</p> <img src="static/img/b.jpg" width="100"> </div>
+                    <div class="letter-box div3"> <p>C</p> <img src="static/img/c.jpg" width="100"> </div>
+                    <div class="letter-box div4"> <p>D</p> <img src="static/img/d.jpg" width="100"> </div>
+                    <div class="letter-box div5"> <p>E</p> <img src="static/img/e.jpg" width="100"> </div>
+                    <div class="letter-box div6"> <p>F</p> <img src="static/img/f.jpg" width="100"> </div>
+                    <div class="letter-box div7"> <p>G</p> <img src="static/img/g.jpg" width="100"> </div>
+                    <div class="letter-box div8"> <p>H</p> <img src="static/img/h.jpg" width="100"> </div>
+                    <div class="letter-box div9"> <p>I</p> <img src="static/img/i.jpg" width="100"> </div>
+                    <div class="letter-box div10"> <p>J</p> <img src="static/img/j.jpg" width="100"> </div>
+                    <div class="letter-box div11"> <p>K</p> <img src="static/img/k.jpg" width="100"> </div>
+                    <div class="letter-box div12"> <p>L</p> <img src="static/img/l.jpg" width="100"> </div>
+                    <div class="letter-box div13"> <p>M</p> <img src="static/img/m.jpg" width="100"> </div>
+                    <div class="letter-box div14"> <p>N</p> <img src="static/img/n.jpg" width="100"> </div>
+                    <div class="letter-box div15"> <p>O</p> <img src="static/img/o.jpg" width="100"> </div>
+                    <div class="letter-box div16"> <p>P</p> <img src="static/img/p.jpg" width="100"> </div>
+                    <div class="letter-box div17"> <p>Q</p> <img src="static/img/q.jpg" width="100"> </div>
+                    <div class="letter-box div18"> <p>R</p> <img src="static/img/r.jpg" width="100"> </div>
+                    <div class="letter-box div19"> <p>S</p> <img src="static/img/s.jpg" width="100"> </div>
+                    <div class="letter-box div20"> <p>T</p> <img src="static/img/t.jpg" width="100"> </div>
+                    <div class="letter-box div21"> <p>U</p> <img src="static/img/u.jpg" width="100"> </div>
+                    <div class="letter-box div22"> <p>V</p> <img src="static/img/v.jpg" width="100"> </div>
+                    <div class="letter-box div23"> <p>W</p> <img src="static/img/w.jpg" width="100"> </div>
+                    <div class="letter-box div24"> <p>X</p> <img src="static/img/x.jpg" width="100"> </div>
+                    <div class="letter-box div25"> <p>Y</p> <img src="static/img/y.jpg" width="100"> </div>
+                    <div class="letter-box div26"> <p>Z</p> <img src="static/img/z.jpg" width="100"> </div>
+                </div>
+
+          </div>
+      </div>
+  </div>
+</body>
+</html>
